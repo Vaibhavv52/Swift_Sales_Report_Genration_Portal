@@ -8,16 +8,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#F8FAFC',
-        sidebar: '#1E293B',
-        primary: '#3B82F6',
-        hover: '#2563EB',
+        background: 'var(--background)',
+        sidebar: 'var(--sidebar)',
+        primary: 'var(--primary)',
+        hover: 'var(--hover)',
+        border: 'var(--border)',
+        textPrimary: 'var(--text-primary)',
+        textMuted: 'var(--text-muted)',
+        card: 'var(--card)',
         success: '#22C55E',
         warning: '#F59E0B',
         danger: '#EF4444',
-        border: '#E2E8F0',
-        textPrimary: '#0F172A',
-        textMuted: '#64748B',
       },
       fontFamily: {
         heading: ['"Plus Jakarta Sans"', 'sans-serif'],
