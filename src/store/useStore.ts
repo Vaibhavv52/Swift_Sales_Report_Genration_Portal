@@ -18,7 +18,12 @@ export const useStore = create<AppState>()(
       user: null,
       login: (email: string) => set({ isAuthenticated: true, user: { name: 'Admin User', email } }),
       logout: () => set({ isAuthenticated: false, user: null }),
-      toggleTheme: () => set((state) => ({ theme: state.theme === 'light' ? 'dark' : 'light' })),
+      toggleTheme: () => set((state) => {
+        const newTheme = state.theme === 'light' ? 'dark' : 'light';
+        const isDark = newTheme === 'dark';
+        document.documentElement.classList.toggle('dark', isDark);
+        return { theme: newTheme };
+      }),
     }),
     {
       name: 'swiftsales-storage',

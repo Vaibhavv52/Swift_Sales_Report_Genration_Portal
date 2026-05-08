@@ -255,7 +255,7 @@ export function Reports() {
               <div className="space-y-2">
                 <Label>Customer Search</Label>
                 <div className="relative">
-                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-textMuted" />
+                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-slate-500 dark:text-slate-400" />
                   <Input type="text" placeholder="Search name..." className="pl-9" {...register('customerSearch')} />
                 </div>
               </div>
@@ -280,7 +280,7 @@ export function Reports() {
           </div>
           <div>
             <h4 className="font-semibold text-sm mb-1 text-primary">Smart Insights</h4>
-            <p className="text-sm text-textMuted">{insights}</p>
+            <p className="text-sm text-slate-500 dark:text-slate-400">{insights}</p>
           </div>
         </CardContent>
       </Card>
@@ -315,7 +315,7 @@ export function Reports() {
         <CardContent>
           <div className="overflow-x-auto custom-scrollbar -mx-6 px-6 sm:mx-0 sm:px-0">
             <table className="w-full text-sm text-left whitespace-nowrap">
-              <thead className="text-xs text-textMuted uppercase bg-slate-50 dark:bg-slate-800/50">
+              <thead className="text-xs text-slate-500 dark:text-slate-400 uppercase bg-slate-50 dark:bg-slate-800">
                 <tr>
                   <th className="px-4 py-3 font-medium cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" onClick={() => handleSort('id')}>
                     <div className="flex items-center gap-1">ID <ArrowUpDown className="h-3 w-3" /></div>
@@ -340,8 +340,8 @@ export function Reports() {
               </thead>
               <tbody>
                 {paginatedData.length > 0 ? paginatedData.map((record) => (
-                  <tr key={record.id} className="border-b border-border even:bg-slate-50/50 dark:even:bg-slate-800/30 hover:bg-blue-50 dark:hover:bg-slate-800 transition-colors duration-200">
-                    <td className="px-4 py-3 font-medium text-textPrimary">{record.id}</td>
+                  <tr key={record.id} className="border-b border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 even:bg-slate-50 dark:even:bg-slate-800/60 hover:bg-blue-50 dark:hover:bg-slate-700 transition-colors">
+                    <td className="px-4 py-3 font-medium text-slate-900 dark:text-slate-100">{record.id}</td>
                     <td className="px-4 py-3">{format(new Date(record.date), 'MMM dd, yyyy')}</td>
                     <td className="px-4 py-3">{record.customerName}</td>
                     <td className="px-4 py-3">{record.department}</td>
@@ -362,7 +362,7 @@ export function Reports() {
                   </tr>
                 )) : (
                   <tr>
-                    <td colSpan={7} className="px-4 py-8 text-center text-textMuted">
+                    <td colSpan={7} className="px-4 py-8 text-center text-slate-500 dark:text-slate-400">
                       No records found matching your filters.
                     </td>
                   </tr>
@@ -374,7 +374,7 @@ export function Reports() {
           {/* Pagination */}
           {totalPages > 1 && (
             <div className="flex items-center justify-between mt-4">
-              <span className="text-sm text-textMuted">
+              <span className="text-sm text-slate-500 dark:text-slate-400">
                 Showing {(currentPage - 1) * itemsPerPage + 1} to {Math.min(currentPage * itemsPerPage, sortedData.length)} of {sortedData.length} entries
               </span>
               <div className="flex items-center gap-2">
@@ -427,34 +427,34 @@ export function Reports() {
           <div className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <p className="text-sm text-textMuted">Order ID</p>
-                <p className="font-medium text-textPrimary">{selectedRecord.id}</p>
+                <p className="text-sm text-slate-500 dark:text-slate-400">Order ID</p>
+                <p className="font-medium text-slate-900 dark:text-slate-100">{selectedRecord.id}</p>
               </div>
               <div>
-                <p className="text-sm text-textMuted">Date</p>
-                <p className="font-medium text-textPrimary">{format(new Date(selectedRecord.date), 'MMM dd, yyyy HH:mm')}</p>
+                <p className="text-sm text-slate-500 dark:text-slate-400">Date</p>
+                <p className="font-medium text-slate-900 dark:text-slate-100">{format(new Date(selectedRecord.date), 'MMM dd, yyyy HH:mm')}</p>
               </div>
               <div>
-                <p className="text-sm text-textMuted">Customer</p>
-                <p className="font-medium text-textPrimary">{selectedRecord.customerName}</p>
+                <p className="text-sm text-slate-500 dark:text-slate-400">Customer</p>
+                <p className="font-medium text-slate-900 dark:text-slate-100">{selectedRecord.customerName}</p>
               </div>
               <div>
-                <p className="text-sm text-textMuted">Department</p>
-                <p className="font-medium text-textPrimary">{selectedRecord.department}</p>
+                <p className="text-sm text-slate-500 dark:text-slate-400">Department</p>
+                <p className="font-medium text-slate-900 dark:text-slate-100">{selectedRecord.department}</p>
               </div>
               <div>
-                <p className="text-sm text-textMuted">Amount</p>
-                <p className="font-medium text-textPrimary text-lg">₹{selectedRecord.amount.toLocaleString()}</p>
+                <p className="text-sm text-slate-500 dark:text-slate-400">Amount</p>
+                <p className="font-medium text-slate-900 dark:text-slate-100 text-lg">₹{selectedRecord.amount.toLocaleString()}</p>
               </div>
               <div>
-                <p className="text-sm text-textMuted">Status</p>
+                <p className="text-sm text-slate-500 dark:text-slate-400">Status</p>
                 <Badge variant={selectedRecord.status === 'Completed' ? 'success' : selectedRecord.status === 'Pending' ? 'warning' : 'danger'} className="mt-1">
                   {selectedRecord.status}
                 </Badge>
               </div>
             </div>
             
-            <div className="pt-4 flex justify-end gap-2 border-t border-border">
+            <div className="pt-4 flex justify-end gap-2 border-t border-slate-200 dark:border-slate-700">
               <Button variant="outline" onClick={() => setSelectedRecord(null)}>Close</Button>
               <Button onClick={() => generatePDF([selectedRecord], true)}>Download PDF</Button>
             </div>

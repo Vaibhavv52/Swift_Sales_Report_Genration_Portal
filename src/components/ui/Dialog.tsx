@@ -42,7 +42,7 @@ export function Dialog({ open, onOpenChange, children, title, description, class
         </button>
         <div className="flex flex-col space-y-1.5 p-6 text-center sm:text-left">
           {title && <h2 className="text-lg font-heading font-semibold leading-none tracking-tight">{title}</h2>}
-          {description && <p className="text-sm text-textMuted">{description}</p>}
+          {description && <p className="text-sm text-slate-500 dark:text-slate-400">{description}</p>}
         </div>
         <div className="p-6 pt-0 overflow-y-auto custom-scrollbar">
           {children}

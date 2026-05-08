@@ -48,7 +48,7 @@ export function Login() {
   };
 
   return (
-    <div className="flex min-h-screen w-full bg-background">
+    <div className="flex min-h-screen w-full bg-slate-100 dark:bg-slate-900">
       {/* Left Panel */}
       <div className="hidden w-1/2 bg-gradient-to-br from-slate-900 to-slate-800 lg:block relative overflow-hidden">
         {/* Animated subtle grid */}
@@ -78,7 +78,7 @@ export function Login() {
 
       {/* Right Panel */}
       <div className="flex w-full items-center justify-center lg:w-1/2 p-8">
-        <Card className="w-full max-w-md animate-slide-up-fade border-0 shadow-none bg-transparent sm:border sm:shadow-lg sm:bg-card">
+        <Card className="w-full max-w-md animate-slide-up-fade border-0 shadow-none bg-transparent sm:border sm:shadow-lg sm:bg-white dark:sm:bg-slate-800">
           <CardHeader className="space-y-2 text-center">
             <div className="flex justify-center mb-4 lg:hidden">
               <div className="rounded-xl bg-primary/20 p-3">

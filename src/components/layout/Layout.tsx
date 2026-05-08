@@ -20,7 +20,7 @@ export function Layout() {
   }
 
   return (
-    <div className="flex h-screen overflow-hidden bg-background transition-colors duration-200">
+    <div className="flex h-screen overflow-hidden bg-slate-100 dark:bg-slate-900 transition-colors duration-200 text-slate-900 dark:text-slate-100">
       {/* Mobile sidebar overlay */}
       {sidebarOpen && (
         <div

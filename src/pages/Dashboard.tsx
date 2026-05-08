@@ -61,7 +61,7 @@ export function Dashboard() {
             <div className="text-2xl font-bold">
               <CountUp end={stats.totalRevenue} prefix="₹" />
             </div>
-            <p className="text-xs text-textMuted mt-1 flex items-center">
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 flex items-center">
               <ArrowUpRight className="mr-1 h-3 w-3 text-success" />
               <span className="text-success font-medium">+14.5%</span> from last month
             </p>
@@ -79,7 +79,7 @@ export function Dashboard() {
             <div className="text-2xl font-bold">
               <CountUp end={stats.ordersThisMonth} />
             </div>
-            <p className="text-xs text-textMuted mt-1 flex items-center">
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 flex items-center">
               <ArrowUpRight className="mr-1 h-3 w-3 text-success" />
               <span className="text-success font-medium">+5.2%</span> from last month
             </p>
@@ -97,7 +97,7 @@ export function Dashboard() {
             <div className="text-2xl font-bold">
               <CountUp end={stats.activeProducts} />
             </div>
-            <p className="text-xs text-textMuted mt-1 flex items-center">
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 flex items-center">
               <ArrowDownRight className="mr-1 h-3 w-3 text-danger" />
               <span className="text-danger font-medium">-1.1%</span> from last month
             </p>
@@ -115,7 +115,7 @@ export function Dashboard() {
             <div className="text-2xl font-bold">
               <CountUp end={stats.pendingReports} />
             </div>
-            <p className="text-xs text-textMuted mt-1">
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
               Requires attention
             </p>
           </CardContent>
@@ -131,13 +131,13 @@ export function Dashboard() {
             </div>
             <div className="flex bg-slate-100 dark:bg-slate-800 rounded-lg p-1">
               <button
-                className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${timeRange === '7d' ? 'bg-white dark:bg-slate-600 shadow-sm' : 'text-textMuted hover:text-textPrimary'}`}
+                className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${timeRange === '7d' ? 'bg-white dark:bg-slate-600 shadow-sm' : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:text-slate-100'}`}
                 onClick={() => setTimeRange('7d')}
               >
                 7d
               </button>
               <button
-                className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${timeRange === '30d' ? 'bg-white dark:bg-slate-600 shadow-sm' : 'text-textMuted hover:text-textPrimary'}`}
+                className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${timeRange === '30d' ? 'bg-white dark:bg-slate-600 shadow-sm' : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:text-slate-100'}`}
                 onClick={() => setTimeRange('30d')}
               >
                 30d
@@ -185,10 +185,10 @@ export function Dashboard() {
           <CardContent>
             <div className="space-y-4">
               {recentActivity.map(sale => (
-                <div key={sale.id} className="flex items-center justify-between border-b border-border pb-4 last:border-0 last:pb-0">
+                <div key={sale.id} className="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-4 last:border-0 last:pb-0">
                   <div className="space-y-1">
                     <p className="text-sm font-medium leading-none">{sale.customerName}</p>
-                    <p className="text-xs text-textMuted">
+                    <p className="text-xs text-slate-500 dark:text-slate-400">
                       {format(new Date(sale.date), 'MMM dd, yyyy')} • {sale.department}
                     </p>
                   </div>

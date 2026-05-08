@@ -10,7 +10,7 @@ const Reports = React.lazy(() => import('@/pages/Reports').then(m => ({ default:
 function App() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<div className="flex h-screen items-center justify-center bg-background"><div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent"></div></div>}>
+      <Suspense fallback={<div className="flex h-screen items-center justify-center bg-slate-100 dark:bg-slate-900"><div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent"></div></div>}>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Layout />}>
